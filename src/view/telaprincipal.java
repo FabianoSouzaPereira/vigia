@@ -41,6 +41,7 @@ public class telaprincipal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jifEventos = new javax.swing.JInternalFrame();
         jInternalFrame2 = new javax.swing.JInternalFrame();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         jpCentrais = new javax.swing.JPanel();
         jdpCentrais = new javax.swing.JDesktopPane();
         jtpCentrais = new javax.swing.JTabbedPane();
@@ -91,7 +92,7 @@ public class telaprincipal extends javax.swing.JFrame {
         jdpMonitoramento.setRequestFocusEnabled(false);
 
         jifMonitoramento.setFrameIcon(null);
-        jifMonitoramento.setMinimumSize(new java.awt.Dimension(38, 200));
+        jifMonitoramento.setMinimumSize(new java.awt.Dimension(38, 190));
         jifMonitoramento.setPreferredSize(new java.awt.Dimension(572, 608));
         jifMonitoramento.setVisible(true);
 
@@ -141,7 +142,7 @@ public class telaprincipal extends javax.swing.JFrame {
                 .addComponent(lbAtendimento)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 57, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jifEventoSelecionadoLayout.setVerticalGroup(
             jifEventoSelecionadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +158,7 @@ public class telaprincipal extends javax.swing.JFrame {
                 .addGroup(jifEventoSelecionadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
-                .addGap(0, 400, Short.MAX_VALUE))
+                .addGap(0, 83, Short.MAX_VALUE))
         );
 
         jifEventos.setTitle("Eventos");
@@ -167,27 +168,26 @@ public class telaprincipal extends javax.swing.JFrame {
         jifEventos.getContentPane().setLayout(jifEventosLayout);
         jifEventosLayout.setHorizontalGroup(
             jifEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 548, Short.MAX_VALUE)
         );
         jifEventosLayout.setVerticalGroup(
             jifEventosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jifMonitoramentoLayout = new javax.swing.GroupLayout(jifMonitoramento.getContentPane());
         jifMonitoramento.getContentPane().setLayout(jifMonitoramentoLayout);
         jifMonitoramentoLayout.setHorizontalGroup(
             jifMonitoramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jifEventoSelecionado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jifEventos)
+            .addComponent(jifEventoSelecionado, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jifMonitoramentoLayout.setVerticalGroup(
             jifMonitoramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jifMonitoramentoLayout.createSequentialGroup()
                 .addComponent(jifEventoSelecionado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jifEventos)
-                .addGap(35, 35, 35))
+                .addComponent(jifEventos))
         );
 
         try {
@@ -196,19 +196,38 @@ public class telaprincipal extends javax.swing.JFrame {
             e1.printStackTrace();
         }
 
+        jInternalFrame2.setDesktopIcon(null);
+        jInternalFrame2.setFrameIcon(null);
         jInternalFrame2.setMinimumSize(new java.awt.Dimension(38, 608));
         jInternalFrame2.setPreferredSize(new java.awt.Dimension(613, 608));
         jInternalFrame2.setVisible(true);
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 583, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 574, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
         jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
         jInternalFrame2Layout.setHorizontalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 609, Short.MAX_VALUE)
+            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                .addComponent(jInternalFrame1)
+                .addContainerGap())
         );
         jInternalFrame2Layout.setVerticalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 579, Short.MAX_VALUE)
+            .addGroup(jInternalFrame2Layout.createSequentialGroup()
+                .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jdpMonitoramento.setLayer(jifMonitoramento, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -230,10 +249,9 @@ public class telaprincipal extends javax.swing.JFrame {
             .addGroup(jdpMonitoramentoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jdpMonitoramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jifMonitoramento, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
-                    .addGroup(jdpMonitoramentoLayout.createSequentialGroup()
-                        .addComponent(jInternalFrame2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 2, Short.MAX_VALUE))))
+                    .addComponent(jInternalFrame2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jifMonitoramento, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout jpMonitoramentoLayout = new javax.swing.GroupLayout(jpMonitoramento);
@@ -245,8 +263,8 @@ public class telaprincipal extends javax.swing.JFrame {
         jpMonitoramentoLayout.setVerticalGroup(
             jpMonitoramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMonitoramentoLayout.createSequentialGroup()
-                .addComponent(jdpMonitoramento, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 34, Short.MAX_VALUE))
+                .addComponent(jdpMonitoramento, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 19, Short.MAX_VALUE))
         );
 
         jtMonitoramento.addTab("Monitoramento", null, jpMonitoramento, "");
@@ -519,6 +537,7 @@ public class telaprincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
